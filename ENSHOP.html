@@ -19,23 +19,67 @@
 
   <!-- Libraries CSS Files -->
   <link href="css/principal.css" rel="stylesheet">
-
-  <!-- Importando js -->
-  <script scr="principal.js"></script>
   
   
 </head>
 <body>
 <div id="header" class="home">
-
-<div class="container">
-  <p> To access this section now you must have the code. Please insert it here:</p><span>|</span></p> 
-  <input type="password" id="senha" >
-  <button (click)="validarSenha"></button>
-    <div id = "resultado"></div>
+  
+  <div class="example">
+    <div class="card">
+      <img src="imgs/casaco.jpeg" alt="Denim Jeans" style="width:100%">
+      <h1>Tailored Jeans</h1>
+      <p class="price">$19.99</p>
+      <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
   </div>
-</div>
-</div>
+  </div>
+
+<script>
+  senha = prompt("To access this section now you must have the code. Please insert it here:<");
+	if (senha =="yes"){
+    
+	document.getElementById('senha').style.display = 'block';
+	}else if(senha ==""){
+		alert("campo obrigatorio");window.location = "ENSHOP2.html" 
+		}else if(senha =="sair"){
+		alert("cancelado");window.location = "index.html"
+}else{
+alert("senha errada");window.location = "ENSHOP2.html"
+}
+</script>
+
+<style>
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  </style>
 
 
 </body>
